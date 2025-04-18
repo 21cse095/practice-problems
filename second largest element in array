@@ -1,0 +1,40 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        Arrays.sort(arr);
+        //if input is given as 1,2,3,5,5 ,here directly i cant take last and last before element bcoz it has duplicates, if there are duplicates other than last element then no issues bcoz it will not affect the result. eg 1,2 3,3,5 so for this the output is 3 
+        //remove duplicates
+        for(int i=size-1;i>0;i--){
+            if(arr[i]==arr[i-1]){
+                size--;
+            }
+        }
+        if(size==1){
+            System.out.println("-1");
+        }else{
+        System.out.println(arr[size-2]);
+        }
+    }
+}
+Input: arr[] = [12, 35, 1, 10, 34, 1]
+Output: 34
+Explanation: The largest element of the array is 35 and the second largest element is 34.
+
+
+Input: arr[] = [10, 5, 10]
+Output: 5
+Explanation: The largest element of the array is 10 and the second largest element is 5.
+
+
+Input: arr[] = [10, 10, 10]
+Output: -1
+Explanation: The largest element of the array is 10 there is no second largest element.
+
+Input arr[]=[1,2,3,5,5]
+output: 3
