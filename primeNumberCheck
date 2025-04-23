@@ -18,4 +18,22 @@ class Main {
         boolean result =  primeCheck(N);  
         System.out.println(result);
     }
-}
+}//why we are iterating till square root of that particular number 
+Consider a natural number N (greater than 1) which exists as a product of two numbers a and b (assume a<=b) that is 
+
+N = a * b  where, 1 < a ≤ b < n
+By multiplying the relation a ≤ b by a, the relation becomes:
+
+a2 ≤ ab     
+By multiplying the relation a ≤ b by b, the relation becomes: 
+
+ab ≤ b2
+From the above-mentioned inequalities, the relation becomes: 
+
+a2 ≤ ab ≤ b2
+We know that N = a * b, so by replacing a * b with N, the following relation is obtained:
+
+a2 ≤ N ≤ b2
+Taking the square root of the equation, considering both a and b as positive numbers, we get:
+
+a ≤ sqrt(N) ≤ b
