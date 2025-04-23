@@ -1,0 +1,25 @@
+import java.util.*;
+class Main {
+    public static boolean palindromeCheck(String string){
+        int left = 0;
+        int right = string.length()-1;
+        while(left<right){
+            if(string.charAt(left)!=string.charAt(right)){
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        boolean result = palindromeCheck(str);
+        if(result==true){
+            System.out.println("PALINDROME");
+        }else{
+            System.out.println("NOT A PALINDROME");
+        }
+    }
+}
