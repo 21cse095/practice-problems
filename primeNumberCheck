@@ -1,0 +1,21 @@
+import java.util.*;
+class Main {
+    public static boolean  primeCheck(int num){
+        if(num<=1){
+            return false;
+        }else{
+            for(int i=2;i<=Math.sqrt(num);i++){
+                if(num%i==0){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        boolean result =  primeCheck(N);  
+        System.out.println(result);
+    }
+}
