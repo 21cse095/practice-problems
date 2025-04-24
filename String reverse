@@ -8,3 +8,9 @@ class Main {
         System.out.println(sb);
     }
 }
+In java string are immutable so we use stringbuilder which is mutable and can be changed(insertion,deletion)
+though we can append i.e concatenate two strings ,behind the scenes it create a new string object 
+Example string str = "hello"
+        str+="world";
+so here str with hello value is stored in one memory space and the appended helloworld is stored in different memory space so str is now pointing to this new object(new memory space).
+so we say string appending is inefficient to be used in loops bcoz each time new object is created.
